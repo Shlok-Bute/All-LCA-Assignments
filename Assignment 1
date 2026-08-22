@@ -4,29 +4,32 @@ tupl = ("apple" , "banana" , "cherry")
 
 choice = int(input(("Enter 1 to edit list , 2 to edit dictionary , 3 to edit tuple")))
 choice2 = 0
-if choice == 1 :
+if choice == 1 : #editing list
     choice2 = int(input("enter 1 to add element , 2 to delete element"))
-    if choice2 == 1 :
+    if choice2 == 1 : # adding element
         element_add = int(input("enter element"))
         lst.append(element_add)
-    elif choice2 == 2 :
+    elif choice2 == 2 : # deleting element
         element_delete = int(input("enter which element to delete"))
         lst.remove(element_delete)
     else :
         print("invalid input")
-elif choice == 2 :
+elif choice == 2 : #editing dictionary
     choice2 = int(input("enter 1 to add element , 2 to delete element"))
-    if choice2 == 1 :
+    if choice2 == 1 : # adding element
         element_add = input("enter name")
         dictionary[105] = element_add
-    elif choice2 == 2 :
+    elif choice2 == 2 : # deleting element
         element_delete = int(input("enter element number of element which is to be deleted"))
-        del dictionary[element_delete]
+        if element_delete in dictionary:
+            del dictionary[element_delete]
+        else:
+            print("Key not found")    
     else :
         print("invalid input")
-elif choice == 3 :
+elif choice == 3 : #editing tuple
     choice2 = int(input("enter 1 to add element "))
-    if choice2 == 1 :
+    if choice2 == 1 : # adding element
         element_add = input("enter fruit")
         tupl= tupl + (element_add,)
     else :
@@ -40,4 +43,3 @@ elif choice == 2:
     print(dictionary)
 elif choice == 3:
     print(tupl)
-
