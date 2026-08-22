@@ -1,1 +1,13 @@
+# to find largest of three numbers
+
+num_1 = int(input("enter 1st number"))
+num_2 = int(input("enter 2nd number"))
+num_3 = int(input("enter 3rd number"))
+
+if num_1 > num_2 and num_1 > num_3 : #checking if num_1 is the largest
+    print( num_1 , " is the largest number")
+elif num_2 > num_3 :                 #since we know num_1 is smaller than num_1 and num_2 we only check if num_2 is greater than num_3 or not
+    print( num_2 , " is the largest number")
+else :                               #if num_1 and num_2 are smaller than num_3  , num_3 is the largest
+    print( num_3 , " is the largest number")
 
