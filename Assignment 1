@@ -1,1 +1,43 @@
+lst = [10,20,30,40,50]
+dictionary = {101:"Amit" , 102:"Sneha" , 103:"Priya" , 104:"Arijit"}
+tupl = ("apple" , "banana" , "cherry")
+
+choice = int(input(("Enter 1 to edit list , 2 to edit dictionary , 3 to edit tuple")))
+choice2 = 0
+if choice == 1 :
+    choice2 = int(input("enter 1 to add element , 2 to delete element"))
+    if choice2 == 1 :
+        element_add = int(input("enter element"))
+        lst.append(element_add)
+    elif choice2 == 2 :
+        element_delete = int(input("enter which element to delete"))
+        lst.remove(element_delete)
+    else :
+        print("invalid input")
+elif choice == 2 :
+    choice2 = int(input("enter 1 to add element , 2 to delete element"))
+    if choice2 == 1 :
+        element_add = input("enter name")
+        dictionary[105] = element_add
+    elif choice2 == 2 :
+        element_delete = int(input("enter element number of element which is to be deleted"))
+        del dictionary[element_delete]
+    else :
+        print("invalid input")
+elif choice == 3 :
+    choice2 = int(input("enter 1 to add element "))
+    if choice2 == 1 :
+        element_add = input("enter fruit")
+        tupl= tupl + (element_add,)
+    else :
+        print("invalid input")
+else :
+    print("invalid input")
+
+if choice == 1:
+    print(lst)
+elif choice == 2:
+    print(dictionary)
+elif choice == 3:
+    print(tupl)
 
