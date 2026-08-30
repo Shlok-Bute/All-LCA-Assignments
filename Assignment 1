@@ -5,26 +5,35 @@ tupl = ("apple" , "banana" , "cherry")
 choice = int(input(("Enter 1 to edit list , 2 to edit dictionary , 3 to edit tuple")))
 choice2 = 0
 if choice == 1 : #editing list
-    choice2 = int(input("enter 1 to add element , 2 to delete element"))
+    choice2 = int(input("enter 1 to add element , 2 to delete element or 3 to update element"))
     if choice2 == 1 : # adding element
         element_add = int(input("enter element"))
         lst.append(element_add)
     elif choice2 == 2 : # deleting element
         element_delete = int(input("enter which element to delete"))
         lst.remove(element_delete)
+    elif choice2 == 3 :
+        update = int(input("Enter the index of element to be updated"))
+        element_update = int(input("Enter updated element"))
+        lst[update] = element_update
     else :
         print("invalid input")
 elif choice == 2 : #editing dictionary
-    choice2 = int(input("enter 1 to add element , 2 to delete element"))
+    choice2 = int(input("enter 1 to add element , 2 to delete element or 3 to update element"))
     if choice2 == 1 : # adding element
-        element_add = input("enter name")
-        dictionary[105] = element_add
+        key = int(input("Enter new key: "))
+        name = input("Enter name: ")
+        dictionary[key] = name
     elif choice2 == 2 : # deleting element
         element_delete = int(input("enter element number of element which is to be deleted"))
         if element_delete in dictionary:
             del dictionary[element_delete]
         else:
             print("Key not found")    
+    elif choice2 == 3 :
+        update = int(input("Enter the key of element to be updated (keys present : 101,102,103,104)"))
+        element_update = input("Enter updated element")
+        dictionary[update] = element_update
     else :
         print("invalid input")
 elif choice == 3 : #editing tuple
