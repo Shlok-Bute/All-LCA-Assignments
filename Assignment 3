@@ -1,0 +1,18 @@
+def triangle (a,b,c) :
+    if a**2 == b**2 + c**2 :
+        print("Right angled triangle")
+    else :
+        print("Not a right angled triangle")
+
+d  = int(input("enter  number"))
+e  = int(input("enter  number"))  
+f  = int(input("enter  number")) 
+
+if d > e and d > f:
+    triangle(d,e,f)
+elif e > d and e > f:
+    triangle(e,d,f)
+else:
+    triangle(f,d,e)
+
+    
